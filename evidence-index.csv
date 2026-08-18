@@ -26,3 +26,6 @@ E-024,requirements.txt,requirements.txt,build,N/A,Authored for Stage 8,high
 E-025,Install-Endpoint.ps1,lab/Install-Endpoint.ps1,script,N/A,Provided evidence pack windows folder,high
 E-026,Capture-LabState.ps1,lab/Capture-LabState.ps1,script,N/A,Provided evidence pack windows folder,high
 E-027,prepare-wazuh.sh,lab/prepare-wazuh.sh,script,N/A,Provided evidence pack lab-source folder,high
+E-028,live-lab-summary.md,evidence/live-lab-summary.md,documentation,N/A,Live lab test summary - 5 ATT&CK techniques,high
+E-029,live-lab-detection-summary.txt,evidence/live-lab-detection-summary.txt,documentation,N/A,Wazuh alert matches from live lab,high
+E-030,wazuh-alert-summary.txt,evidence/wazuh-alert-summary.txt,documentation,N/A,Wazuh replay alert summary,high
