@@ -1,0 +1,730 @@
+{
+  "summary": {
+    "total_fixtures": 0,
+    "passed": 0,
+    "failed": 0,
+    "categories": {
+      "no_telemetry": 0,
+      "decoder_failure": 0,
+      "rule_miss": 0,
+      "suppressed": 0,
+      "alerted": 0
+    }
+  },
+  "fixtures": [],
+  "replay": {
+    "total_events": 250000,
+    "decoded_events": 250000,
+    "alert_events": 8,
+    "alert_details": [
+      {
+        "rule_id": 110200,
+        "level": 10,
+        "technique_id": "T1059.001",
+        "description": "PowerShell Execution from Suspicious Parent",
+        "host": "NS-WIN-101",
+        "image": "POWERSHELL.EXE",
+        "parent": "winword.exe",
+        "command_family": "encoded_or_obfuscated"
+      },
+      {
+        "rule_id": 110203,
+        "level": 10,
+        "technique_id": "T1003.001",
+        "description": "Credential Access via LOLBin",
+        "host": "NS-WIN-101",
+        "image": "POWERSHELL.EXE",
+        "parent": "winword.exe",
+        "command_family": "encoded_or_obfuscated"
+      },
+      {
+        "rule_id": 110211,
+        "level": 10,
+        "technique_id": "T1027",
+        "description": "Obfuscated File or Command Execution",
+        "host": "NS-WIN-101",
+        "image": "POWERSHELL.EXE",
+        "parent": "winword.exe",
+        "command_family": "encoded_or_obfuscated"
+      },
+      {
+        "rule_id": 110203,
+        "level": 10,
+        "technique_id": "T1003.001",
+        "description": "Credential Access via LOLBin",
+        "host": "NS-WIN-101",
+        "image": "CERTUTIL.EXE",
+        "parent": "powershell.exe",
+        "command_family": "download"
+      },
+      {
+        "rule_id": 110206,
+        "level": 10,
+        "technique_id": "T1105",
+        "description": "Ingress Tool Transfer via LOLBin",
+        "host": "NS-WIN-101",
+        "image": "CERTUTIL.EXE",
+        "parent": "powershell.exe",
+        "command_family": "download"
+      },
+      {
+        "rule_id": 110207,
+        "level": 10,
+        "technique_id": "T1218.011",
+        "description": "Rundll32 Execution from Suspicious Parent",
+        "host": "NS-WIN-101",
+        "image": "CERTUTIL.EXE",
+        "parent": "powershell.exe",
+        "command_family": "download"
+      },
+      {
+        "rule_id": 110210,
+        "level": 10,
+        "technique_id": "T1555",
+        "description": "Credential Store Access from Suspicious Context",
+        "host": "NS-WIN-101",
+        "image": "CERTUTIL.EXE",
+        "parent": "powershell.exe",
+        "command_family": "download"
+      },
+      {
+        "rule_id": 110211,
+        "level": 10,
+        "technique_id": "T1027",
+        "description": "Obfuscated File or Command Execution",
+        "host": "NS-WIN-101",
+        "image": "CERTUTIL.EXE",
+        "parent": "powershell.exe",
+        "command_family": "download"
+      },
+      {
+        "rule_id": 110201,
+        "level": 10,
+        "technique_id": "T1053.005",
+        "description": "Scheduled Task Creation from Suspicious Context",
+        "host": "NS-WIN-101",
+        "image": "REG.EXE",
+        "parent": "cmd.exe",
+        "command_family": "registry_run_key"
+      },
+      {
+        "rule_id": 110202,
+        "level": 10,
+        "technique_id": "T1547.001",
+        "description": "Registry Run Key Modification via Shell",
+        "host": "NS-WIN-101",
+        "image": "REG.EXE",
+        "parent": "cmd.exe",
+        "command_family": "registry_run_key"
+      },
+      {
+        "rule_id": 110203,
+        "level": 10,
+        "technique_id": "T1003.001",
+        "description": "Credential Access via LOLBin",
+        "host": "NS-WIN-101",
+        "image": "REG.EXE",
+        "parent": "cmd.exe",
+        "command_family": "registry_run_key"
+      },
+      {
+        "rule_id": 110206,
+        "level": 10,
+        "technique_id": "T1105",
+        "description": "Ingress Tool Transfer via LOLBin",
+        "host": "NS-WIN-101",
+        "image": "REG.EXE",
+        "parent": "cmd.exe",
+        "command_family": "registry_run_key"
+      },
+      {
+        "rule_id": 110207,
+        "level": 10,
+        "technique_id": "T1218.011",
+        "description": "Rundll32 Execution from Suspicious Parent",
+        "host": "NS-WIN-101",
+        "image": "REG.EXE",
+        "parent": "cmd.exe",
+        "command_family": "registry_run_key"
+      },
+      {
+        "rule_id": 110210,
+        "level": 10,
+        "technique_id": "T1555",
+        "description": "Credential Store Access from Suspicious Context",
+        "host": "NS-WIN-101",
+        "image": "REG.EXE",
+        "parent": "cmd.exe",
+        "command_family": "registry_run_key"
+      },
+      {
+        "rule_id": 110211,
+        "level": 10,
+        "technique_id": "T1027",
+        "description": "Obfuscated File or Command Execution",
+        "host": "NS-WIN-101",
+        "image": "REG.EXE",
+        "parent": "cmd.exe",
+        "command_family": "registry_run_key"
+      },
+      {
+        "rule_id": 110203,
+        "level": 10,
+        "technique_id": "T1003.001",
+        "description": "Credential Access via LOLBin",
+        "host": "NS-WIN-101",
+        "image": "RUNDLL32.EXE",
+        "parent": "powershell.exe",
+        "command_family": "credential_access"
+      },
+      {
+        "rule_id": 110206,
+        "level": 10,
+        "technique_id": "T1105",
+        "description": "Ingress Tool Transfer via LOLBin",
+        "host": "NS-WIN-101",
+        "image": "RUNDLL32.EXE",
+        "parent": "powershell.exe",
+        "command_family": "credential_access"
+      },
+      {
+        "rule_id": 110207,
+        "level": 10,
+        "technique_id": "T1218.011",
+        "description": "Rundll32 Execution from Suspicious Parent",
+        "host": "NS-WIN-101",
+        "image": "RUNDLL32.EXE",
+        "parent": "powershell.exe",
+        "command_family": "credential_access"
+      },
+      {
+        "rule_id": 110210,
+        "level": 10,
+        "technique_id": "T1555",
+        "description": "Credential Store Access from Suspicious Context",
+        "host": "NS-WIN-101",
+        "image": "RUNDLL32.EXE",
+        "parent": "powershell.exe",
+        "command_family": "credential_access"
+      },
+      {
+        "rule_id": 110211,
+        "level": 10,
+        "technique_id": "T1027",
+        "description": "Obfuscated File or Command Execution",
+        "host": "NS-WIN-101",
+        "image": "RUNDLL32.EXE",
+        "parent": "powershell.exe",
+        "command_family": "credential_access"
+      },
+      {
+        "rule_id": 110200,
+        "level": 10,
+        "technique_id": "T1059.001",
+        "description": "PowerShell Execution from Suspicious Parent",
+        "host": "NS-WIN-101",
+        "image": "POWERSHELL.EXE",
+        "parent": "winword.exe",
+        "command_family": "encoded_or_obfuscated"
+      },
+      {
+        "rule_id": 110203,
+        "level": 10,
+        "technique_id": "T1003.001",
+        "description": "Credential Access via LOLBin",
+        "host": "NS-WIN-101",
+        "image": "POWERSHELL.EXE",
+        "parent": "winword.exe",
+        "command_family": "encoded_or_obfuscated"
+      },
+      {
+        "rule_id": 110211,
+        "level": 10,
+        "technique_id": "T1027",
+        "description": "Obfuscated File or Command Execution",
+        "host": "NS-WIN-101",
+        "image": "POWERSHELL.EXE",
+        "parent": "winword.exe",
+        "command_family": "encoded_or_obfuscated"
+      },
+      {
+        "rule_id": 110203,
+        "level": 10,
+        "technique_id": "T1003.001",
+        "description": "Credential Access via LOLBin",
+        "host": "NS-WIN-101",
+        "image": "CERTUTIL.EXE",
+        "parent": "powershell.exe",
+        "command_family": "download"
+      },
+      {
+        "rule_id": 110206,
+        "level": 10,
+        "technique_id": "T1105",
+        "description": "Ingress Tool Transfer via LOLBin",
+        "host": "NS-WIN-101",
+        "image": "CERTUTIL.EXE",
+        "parent": "powershell.exe",
+        "command_family": "download"
+      },
+      {
+        "rule_id": 110207,
+        "level": 10,
+        "technique_id": "T1218.011",
+        "description": "Rundll32 Execution from Suspicious Parent",
+        "host": "NS-WIN-101",
+        "image": "CERTUTIL.EXE",
+        "parent": "powershell.exe",
+        "command_family": "download"
+      },
+      {
+        "rule_id": 110210,
+        "level": 10,
+        "technique_id": "T1555",
+        "description": "Credential Store Access from Suspicious Context",
+        "host": "NS-WIN-101",
+        "image": "CERTUTIL.EXE",
+        "parent": "powershell.exe",
+        "command_family": "download"
+      },
+      {
+        "rule_id": 110211,
+        "level": 10,
+        "technique_id": "T1027",
+        "description": "Obfuscated File or Command Execution",
+        "host": "NS-WIN-101",
+        "image": "CERTUTIL.EXE",
+        "parent": "powershell.exe",
+        "command_family": "download"
+      },
+      {
+        "rule_id": 110201,
+        "level": 10,
+        "technique_id": "T1053.005",
+        "description": "Scheduled Task Creation from Suspicious Context",
+        "host": "NS-WIN-101",
+        "image": "REG.EXE",
+        "parent": "cmd.exe",
+        "command_family": "registry_run_key"
+      },
+      {
+        "rule_id": 110202,
+        "level": 10,
+        "technique_id": "T1547.001",
+        "description": "Registry Run Key Modification via Shell",
+        "host": "NS-WIN-101",
+        "image": "REG.EXE",
+        "parent": "cmd.exe",
+        "command_family": "registry_run_key"
+      },
+      {
+        "rule_id": 110203,
+        "level": 10,
+        "technique_id": "T1003.001",
+        "description": "Credential Access via LOLBin",
+        "host": "NS-WIN-101",
+        "image": "REG.EXE",
+        "parent": "cmd.exe",
+        "command_family": "registry_run_key"
+      },
+      {
+        "rule_id": 110206,
+        "level": 10,
+        "technique_id": "T1105",
+        "description": "Ingress Tool Transfer via LOLBin",
+        "host": "NS-WIN-101",
+        "image": "REG.EXE",
+        "parent": "cmd.exe",
+        "command_family": "registry_run_key"
+      },
+      {
+        "rule_id": 110207,
+        "level": 10,
+        "technique_id": "T1218.011",
+        "description": "Rundll32 Execution from Suspicious Parent",
+        "host": "NS-WIN-101",
+        "image": "REG.EXE",
+        "parent": "cmd.exe",
+        "command_family": "registry_run_key"
+      },
+      {
+        "rule_id": 110210,
+        "level": 10,
+        "technique_id": "T1555",
+        "description": "Credential Store Access from Suspicious Context",
+        "host": "NS-WIN-101",
+        "image": "REG.EXE",
+        "parent": "cmd.exe",
+        "command_family": "registry_run_key"
+      },
+      {
+        "rule_id": 110211,
+        "level": 10,
+        "technique_id": "T1027",
+        "description": "Obfuscated File or Command Execution",
+        "host": "NS-WIN-101",
+        "image": "REG.EXE",
+        "parent": "cmd.exe",
+        "command_family": "registry_run_key"
+      },
+      {
+        "rule_id": 110203,
+        "level": 10,
+        "technique_id": "T1003.001",
+        "description": "Credential Access via LOLBin",
+        "host": "NS-WIN-101",
+        "image": "RUNDLL32.EXE",
+        "parent": "powershell.exe",
+        "command_family": "credential_access"
+      },
+      {
+        "rule_id": 110206,
+        "level": 10,
+        "technique_id": "T1105",
+        "description": "Ingress Tool Transfer via LOLBin",
+        "host": "NS-WIN-101",
+        "image": "RUNDLL32.EXE",
+        "parent": "powershell.exe",
+        "command_family": "credential_access"
+      },
+      {
+        "rule_id": 110207,
+        "level": 10,
+        "technique_id": "T1218.011",
+        "description": "Rundll32 Execution from Suspicious Parent",
+        "host": "NS-WIN-101",
+        "image": "RUNDLL32.EXE",
+        "parent": "powershell.exe",
+        "command_family": "credential_access"
+      },
+      {
+        "rule_id": 110210,
+        "level": 10,
+        "technique_id": "T1555",
+        "description": "Credential Store Access from Suspicious Context",
+        "host": "NS-WIN-101",
+        "image": "RUNDLL32.EXE",
+        "parent": "powershell.exe",
+        "command_family": "credential_access"
+      },
+      {
+        "rule_id": 110211,
+        "level": 10,
+        "technique_id": "T1027",
+        "description": "Obfuscated File or Command Execution",
+        "host": "NS-WIN-101",
+        "image": "RUNDLL32.EXE",
+        "parent": "powershell.exe",
+        "command_family": "credential_access"
+      }
+    ],
+    "correlation_alerts": [
+      {
+        "rule_id": 110300,
+        "level": 12,
+        "name": "Office-to-Shell-to-Download Chain",
+        "host": "NS-WIN-101",
+        "event_count": 2,
+        "mitre": "T1059.001",
+        "events": [
+          "unknown",
+          "unknown"
+        ]
+      },
+      {
+        "rule_id": 110304,
+        "level": 12,
+        "name": "Encoded-to-Download Chain",
+        "host": "NS-WIN-101",
+        "event_count": 2,
+        "mitre": "T1027",
+        "events": [
+          "unknown",
+          "unknown"
+        ]
+      },
+      {
+        "rule_id": 110300,
+        "level": 12,
+        "name": "Office-to-Shell-to-Download Chain",
+        "host": "NS-WIN-101",
+        "event_count": 2,
+        "mitre": "T1059.001",
+        "events": [
+          "unknown",
+          "unknown"
+        ]
+      },
+      {
+        "rule_id": 110303,
+        "level": 12,
+        "name": "Multiple Suspicious Events Same Host",
+        "host": "NS-WIN-101",
+        "event_count": 3,
+        "mitre": null,
+        "events": [
+          "unknown",
+          "unknown",
+          "unknown"
+        ]
+      },
+      {
+        "rule_id": 110304,
+        "level": 12,
+        "name": "Encoded-to-Download Chain",
+        "host": "NS-WIN-101",
+        "event_count": 2,
+        "mitre": "T1027",
+        "events": [
+          "unknown",
+          "unknown"
+        ]
+      },
+      {
+        "rule_id": 110300,
+        "level": 12,
+        "name": "Office-to-Shell-to-Download Chain",
+        "host": "NS-WIN-101",
+        "event_count": 2,
+        "mitre": "T1059.001",
+        "events": [
+          "unknown",
+          "unknown"
+        ]
+      },
+      {
+        "rule_id": 110301,
+        "level": 12,
+        "name": "Shell-to-Credential-Access Chain",
+        "host": "NS-WIN-101",
+        "event_count": 2,
+        "mitre": "T1003.001",
+        "events": [
+          "unknown",
+          "unknown"
+        ]
+      },
+      {
+        "rule_id": 110303,
+        "level": 12,
+        "name": "Multiple Suspicious Events Same Host",
+        "host": "NS-WIN-101",
+        "event_count": 3,
+        "mitre": null,
+        "events": [
+          "unknown",
+          "unknown",
+          "unknown"
+        ]
+      },
+      {
+        "rule_id": 110304,
+        "level": 12,
+        "name": "Encoded-to-Download Chain",
+        "host": "NS-WIN-101",
+        "event_count": 2,
+        "mitre": "T1027",
+        "events": [
+          "unknown",
+          "unknown"
+        ]
+      },
+      {
+        "rule_id": 110300,
+        "level": 12,
+        "name": "Office-to-Shell-to-Download Chain",
+        "host": "NS-WIN-101",
+        "event_count": 2,
+        "mitre": "T1059.001",
+        "events": [
+          "unknown",
+          "unknown"
+        ]
+      },
+      {
+        "rule_id": 110301,
+        "level": 12,
+        "name": "Shell-to-Credential-Access Chain",
+        "host": "NS-WIN-101",
+        "event_count": 2,
+        "mitre": "T1003.001",
+        "events": [
+          "unknown",
+          "unknown"
+        ]
+      },
+      {
+        "rule_id": 110303,
+        "level": 12,
+        "name": "Multiple Suspicious Events Same Host",
+        "host": "NS-WIN-101",
+        "event_count": 3,
+        "mitre": null,
+        "events": [
+          "unknown",
+          "unknown",
+          "unknown"
+        ]
+      },
+      {
+        "rule_id": 110304,
+        "level": 12,
+        "name": "Encoded-to-Download Chain",
+        "host": "NS-WIN-101",
+        "event_count": 2,
+        "mitre": "T1027",
+        "events": [
+          "unknown",
+          "unknown"
+        ]
+      },
+      {
+        "rule_id": 110300,
+        "level": 12,
+        "name": "Office-to-Shell-to-Download Chain",
+        "host": "NS-WIN-101",
+        "event_count": 2,
+        "mitre": "T1059.001",
+        "events": [
+          "unknown",
+          "unknown"
+        ]
+      },
+      {
+        "rule_id": 110301,
+        "level": 12,
+        "name": "Shell-to-Credential-Access Chain",
+        "host": "NS-WIN-101",
+        "event_count": 2,
+        "mitre": "T1003.001",
+        "events": [
+          "unknown",
+          "unknown"
+        ]
+      },
+      {
+        "rule_id": 110303,
+        "level": 12,
+        "name": "Multiple Suspicious Events Same Host",
+        "host": "NS-WIN-101",
+        "event_count": 3,
+        "mitre": null,
+        "events": [
+          "unknown",
+          "unknown",
+          "unknown"
+        ]
+      },
+      {
+        "rule_id": 110304,
+        "level": 12,
+        "name": "Encoded-to-Download Chain",
+        "host": "NS-WIN-101",
+        "event_count": 2,
+        "mitre": "T1027",
+        "events": [
+          "unknown",
+          "unknown"
+        ]
+      },
+      {
+        "rule_id": 110300,
+        "level": 12,
+        "name": "Office-to-Shell-to-Download Chain",
+        "host": "NS-WIN-101",
+        "event_count": 2,
+        "mitre": "T1059.001",
+        "events": [
+          "unknown",
+          "unknown"
+        ]
+      },
+      {
+        "rule_id": 110301,
+        "level": 12,
+        "name": "Shell-to-Credential-Access Chain",
+        "host": "NS-WIN-101",
+        "event_count": 2,
+        "mitre": "T1003.001",
+        "events": [
+          "unknown",
+          "unknown"
+        ]
+      },
+      {
+        "rule_id": 110303,
+        "level": 12,
+        "name": "Multiple Suspicious Events Same Host",
+        "host": "NS-WIN-101",
+        "event_count": 3,
+        "mitre": null,
+        "events": [
+          "unknown",
+          "unknown",
+          "unknown"
+        ]
+      },
+      {
+        "rule_id": 110304,
+        "level": 12,
+        "name": "Encoded-to-Download Chain",
+        "host": "NS-WIN-101",
+        "event_count": 2,
+        "mitre": "T1027",
+        "events": [
+          "unknown",
+          "unknown"
+        ]
+      },
+      {
+        "rule_id": 110300,
+        "level": 12,
+        "name": "Office-to-Shell-to-Download Chain",
+        "host": "NS-WIN-101",
+        "event_count": 2,
+        "mitre": "T1059.001",
+        "events": [
+          "unknown",
+          "unknown"
+        ]
+      },
+      {
+        "rule_id": 110301,
+        "level": 12,
+        "name": "Shell-to-Credential-Access Chain",
+        "host": "NS-WIN-101",
+        "event_count": 2,
+        "mitre": "T1003.001",
+        "events": [
+          "unknown",
+          "unknown"
+        ]
+      },
+      {
+        "rule_id": 110303,
+        "level": 12,
+        "name": "Multiple Suspicious Events Same Host",
+        "host": "NS-WIN-101",
+        "event_count": 3,
+        "mitre": null,
+        "events": [
+          "unknown",
+          "unknown",
+          "unknown"
+        ]
+      },
+      {
+        "rule_id": 110304,
+        "level": 12,
+        "name": "Encoded-to-Download Chain",
+        "host": "NS-WIN-101",
+        "event_count": 2,
+        "mitre": "T1027",
+        "events": [
+          "unknown",
+          "unknown"
+        ]
+      }
+    ]
+  }
+}

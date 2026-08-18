@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+test-results.xml
+replay-results.xml
+evidence/raw/windows-replay.jsonl
+.venv/
+*.egg-info/

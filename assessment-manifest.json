@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "project_id": "SOC-A4",
+  "variant": "V1",
+  "candidate_binding": "UBI-2026-0155",
+  "assigned_pack": {
+    "file_name": "windows-replay.jsonl",
+    "sha256": "ea7f96497f9275ccdc47fdb026480558547db5bfaa7aa8bf3a806a2bc9272838",
+    "manifest_signature": "UBI-A8-5387EC8C680E",
+    "verified_before_use": true
+  },
+  "commit": "INSERT_GIT_COMMIT_HASH",
+  "supported_environment": {
+    "os": "WSL2 Ubuntu (Windows 11)",
+    "cpu": "i7-1165G7",
+    "memory_gb": 16,
+    "tool_versions": {
+      "python": "3.10+",
+      "wazuh": "4.14.6",
+      "pytest": "7.0+",
+      "docker": "Docker Desktop with WSL2 backend"
+    }
+  },
+  "commands": {
+    "provision": "python3 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt",
+    "build": "make test && make harness",
+    "test": "python3 -m pytest tests/ -v --junitxml=test-results.xml",
+    "clean": "make clean"
+  },
+  "results": {
+    "public_tests": { "passed": 69, "failed": 0, "report": "test-results.xml" },
+    "runtime_seconds": 2.9,
+    "peak_memory_mb": 0,
+    "output_hashes": {
+      "test_results_xml": "COMPUTED_AT_BUILD",
+      "replay_results_xml": "COMPUTED_AT_BUILD"
+    }
+  },
+  "inputs": [
+    "fixtures/public-fixtures.json",
+    "evidence/raw/windows-replay.jsonl"
+  ],
+  "outputs": [
+    "test-results.xml",
+    "test-results.json",
+    "replay-results.xml",
+    "replay-results.json"
+  ],
+  "manual_preconditions": [
+    "Copy windows-replay.jsonl to evidence/raw/ before running replay",
+    "Fill git commit hash after pushing to GitHub",
+    "Run live Atomic Red Team tests on Windows VM for 5 techniques without sealed replay evidence",
+    "Record 12-minute defense walkthrough video"
+  ],
+  "known_limitations": [
+    "5 of 12 techniques lack sealed replay evidence (T1053.005, T1087.001, T1057, T1136.001, T1555) — require live lab testing",
+    "Wazuh Docker deployment not included in ZIP — follow lab/README.md for setup",
+    "Windows 11 VM setup required for live Atomic Red Team tests"
+  ]
+}

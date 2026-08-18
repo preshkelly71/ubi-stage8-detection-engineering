@@ -1,0 +1,544 @@
+{
+  "summary": {
+    "total_fixtures": 36,
+    "passed": 36,
+    "failed": 0,
+    "categories": {
+      "no_telemetry": 0,
+      "decoder_failure": 0,
+      "rule_miss": 24,
+      "suppressed": 0,
+      "alerted": 12
+    }
+  },
+  "fixtures": [
+    {
+      "case_id": "P-DET-01",
+      "expected": "alert",
+      "category": "alerted",
+      "verdict": "PASS",
+      "events_count": 2,
+      "decoded_count": 2,
+      "alert_count": 1,
+      "alerts": [
+        {
+          "rule_id": 110203,
+          "level": 10,
+          "technique_id": "T1003.001",
+          "description": "Credential Access via LOLBin",
+          "host": "NS-WIN-101",
+          "image": "regsvr32.exe",
+          "parent": "services.exe",
+          "command_family": "encoded_or_obfuscated"
+        }
+      ],
+      "details": "1 alert(s) from 2 decoded events"
+    },
+    {
+      "case_id": "P-DET-02",
+      "expected": "alert",
+      "category": "alerted",
+      "verdict": "PASS",
+      "events_count": 2,
+      "decoded_count": 2,
+      "alert_count": 1,
+      "alerts": [
+        {
+          "rule_id": 110200,
+          "level": 10,
+          "technique_id": "T1059.001",
+          "description": "PowerShell Execution from Suspicious Parent",
+          "host": "NS-WIN-101",
+          "image": "rundll32.exe",
+          "parent": "explorer.exe",
+          "command_family": "encoded_or_obfuscated"
+        }
+      ],
+      "details": "1 alert(s) from 2 decoded events"
+    },
+    {
+      "case_id": "P-DET-03",
+      "expected": "alert",
+      "category": "alerted",
+      "verdict": "PASS",
+      "events_count": 2,
+      "decoded_count": 2,
+      "alert_count": 1,
+      "alerts": [
+        {
+          "rule_id": 110207,
+          "level": 10,
+          "technique_id": "T1218.011",
+          "description": "Rundll32 Execution from Suspicious Parent",
+          "host": "NS-WIN-101",
+          "image": "powershell.exe",
+          "parent": "wmiprvse.exe",
+          "command_family": "native"
+        }
+      ],
+      "details": "1 alert(s) from 2 decoded events"
+    },
+    {
+      "case_id": "P-DET-04",
+      "expected": "alert",
+      "category": "alerted",
+      "verdict": "PASS",
+      "events_count": 2,
+      "decoded_count": 2,
+      "alert_count": 1,
+      "alerts": [
+        {
+          "rule_id": 110206,
+          "level": 10,
+          "technique_id": "T1105",
+          "description": "Ingress Tool Transfer via LOLBin",
+          "host": "NS-WIN-101",
+          "image": "regsvr32.exe",
+          "parent": "explorer.exe",
+          "command_family": "encoded_or_obfuscated"
+        }
+      ],
+      "details": "1 alert(s) from 2 decoded events"
+    },
+    {
+      "case_id": "P-DET-05",
+      "expected": "alert",
+      "category": "alerted",
+      "verdict": "PASS",
+      "events_count": 2,
+      "decoded_count": 2,
+      "alert_count": 1,
+      "alerts": [
+        {
+          "rule_id": 110207,
+          "level": 10,
+          "technique_id": "T1218.011",
+          "description": "Rundll32 Execution from Suspicious Parent",
+          "host": "NS-WIN-101",
+          "image": "cmd.exe",
+          "parent": "config-agent.exe",
+          "command_family": "encoded_or_obfuscated"
+        }
+      ],
+      "details": "1 alert(s) from 2 decoded events"
+    },
+    {
+      "case_id": "P-DET-06",
+      "expected": "alert",
+      "category": "alerted",
+      "verdict": "PASS",
+      "events_count": 2,
+      "decoded_count": 2,
+      "alert_count": 1,
+      "alerts": [
+        {
+          "rule_id": 110200,
+          "level": 10,
+          "technique_id": "T1059.001",
+          "description": "PowerShell Execution from Suspicious Parent",
+          "host": "NS-WIN-101",
+          "image": "cmd.exe",
+          "parent": "config-agent.exe",
+          "command_family": "encoded_or_obfuscated"
+        }
+      ],
+      "details": "1 alert(s) from 2 decoded events"
+    },
+    {
+      "case_id": "P-DET-07",
+      "expected": "alert",
+      "category": "alerted",
+      "verdict": "PASS",
+      "events_count": 2,
+      "decoded_count": 2,
+      "alert_count": 1,
+      "alerts": [
+        {
+          "rule_id": 110203,
+          "level": 10,
+          "technique_id": "T1003.001",
+          "description": "Credential Access via LOLBin",
+          "host": "NS-WIN-101",
+          "image": "cmd.exe",
+          "parent": "winword.exe",
+          "command_family": "encoded_or_obfuscated"
+        }
+      ],
+      "details": "1 alert(s) from 2 decoded events"
+    },
+    {
+      "case_id": "P-DET-08",
+      "expected": "alert",
+      "category": "alerted",
+      "verdict": "PASS",
+      "events_count": 2,
+      "decoded_count": 2,
+      "alert_count": 1,
+      "alerts": [
+        {
+          "rule_id": 110208,
+          "level": 10,
+          "technique_id": "T1059.003",
+          "description": "Command Shell Execution from Suspicious Parent",
+          "host": "NS-WIN-101",
+          "image": "regsvr32.exe",
+          "parent": "sccm-client.exe",
+          "command_family": "encoded_or_obfuscated"
+        }
+      ],
+      "details": "1 alert(s) from 2 decoded events"
+    },
+    {
+      "case_id": "P-DET-09",
+      "expected": "alert",
+      "category": "alerted",
+      "verdict": "PASS",
+      "events_count": 2,
+      "decoded_count": 2,
+      "alert_count": 1,
+      "alerts": [
+        {
+          "rule_id": 110207,
+          "level": 10,
+          "technique_id": "T1218.011",
+          "description": "Rundll32 Execution from Suspicious Parent",
+          "host": "NS-WIN-101",
+          "image": "cmd.exe",
+          "parent": "services.exe",
+          "command_family": "native"
+        }
+      ],
+      "details": "1 alert(s) from 2 decoded events"
+    },
+    {
+      "case_id": "P-DET-10",
+      "expected": "alert",
+      "category": "alerted",
+      "verdict": "PASS",
+      "events_count": 2,
+      "decoded_count": 2,
+      "alert_count": 1,
+      "alerts": [
+        {
+          "rule_id": 110203,
+          "level": 10,
+          "technique_id": "T1003.001",
+          "description": "Credential Access via LOLBin",
+          "host": "NS-WIN-101",
+          "image": "cmd.exe",
+          "parent": "explorer.exe",
+          "command_family": "encoded_or_obfuscated"
+        }
+      ],
+      "details": "1 alert(s) from 2 decoded events"
+    },
+    {
+      "case_id": "P-DET-11",
+      "expected": "alert",
+      "category": "alerted",
+      "verdict": "PASS",
+      "events_count": 2,
+      "decoded_count": 2,
+      "alert_count": 1,
+      "alerts": [
+        {
+          "rule_id": 110207,
+          "level": 10,
+          "technique_id": "T1218.011",
+          "description": "Rundll32 Execution from Suspicious Parent",
+          "host": "NS-WIN-101",
+          "image": "powershell.exe",
+          "parent": "services.exe",
+          "command_family": "encoded_or_obfuscated"
+        }
+      ],
+      "details": "1 alert(s) from 2 decoded events"
+    },
+    {
+      "case_id": "P-DET-12",
+      "expected": "alert",
+      "category": "alerted",
+      "verdict": "PASS",
+      "events_count": 2,
+      "decoded_count": 2,
+      "alert_count": 1,
+      "alerts": [
+        {
+          "rule_id": 110208,
+          "level": 10,
+          "technique_id": "T1059.003",
+          "description": "Command Shell Execution from Suspicious Parent",
+          "host": "NS-WIN-101",
+          "image": "regsvr32.exe",
+          "parent": "enterprise-updater.exe",
+          "command_family": "encoded_or_obfuscated"
+        }
+      ],
+      "details": "1 alert(s) from 2 decoded events"
+    },
+    {
+      "case_id": "P-DET-13",
+      "expected": "no_alert",
+      "category": "rule_miss",
+      "verdict": "PASS",
+      "events_count": 2,
+      "decoded_count": 2,
+      "alert_count": 0,
+      "alerts": [],
+      "details": "2 decoded, no rule matched (correct benign)"
+    },
+    {
+      "case_id": "P-DET-14",
+      "expected": "no_alert",
+      "category": "rule_miss",
+      "verdict": "PASS",
+      "events_count": 2,
+      "decoded_count": 2,
+      "alert_count": 0,
+      "alerts": [],
+      "details": "2 decoded, no rule matched (correct benign)"
+    },
+    {
+      "case_id": "P-DET-15",
+      "expected": "no_alert",
+      "category": "rule_miss",
+      "verdict": "PASS",
+      "events_count": 2,
+      "decoded_count": 2,
+      "alert_count": 0,
+      "alerts": [],
+      "details": "2 decoded, no rule matched (correct benign)"
+    },
+    {
+      "case_id": "P-DET-16",
+      "expected": "no_alert",
+      "category": "rule_miss",
+      "verdict": "PASS",
+      "events_count": 2,
+      "decoded_count": 2,
+      "alert_count": 0,
+      "alerts": [],
+      "details": "2 decoded, no rule matched (correct benign)"
+    },
+    {
+      "case_id": "P-DET-17",
+      "expected": "no_alert",
+      "category": "rule_miss",
+      "verdict": "PASS",
+      "events_count": 2,
+      "decoded_count": 2,
+      "alert_count": 0,
+      "alerts": [],
+      "details": "2 decoded, no rule matched (correct benign)"
+    },
+    {
+      "case_id": "P-DET-18",
+      "expected": "no_alert",
+      "category": "rule_miss",
+      "verdict": "PASS",
+      "events_count": 2,
+      "decoded_count": 2,
+      "alert_count": 0,
+      "alerts": [],
+      "details": "2 decoded, no rule matched (correct benign)"
+    },
+    {
+      "case_id": "P-DET-19",
+      "expected": "no_alert",
+      "category": "rule_miss",
+      "verdict": "PASS",
+      "events_count": 2,
+      "decoded_count": 2,
+      "alert_count": 0,
+      "alerts": [],
+      "details": "2 decoded, no rule matched (correct benign)"
+    },
+    {
+      "case_id": "P-DET-20",
+      "expected": "no_alert",
+      "category": "rule_miss",
+      "verdict": "PASS",
+      "events_count": 2,
+      "decoded_count": 2,
+      "alert_count": 0,
+      "alerts": [],
+      "details": "2 decoded, no rule matched (correct benign)"
+    },
+    {
+      "case_id": "P-DET-21",
+      "expected": "no_alert",
+      "category": "rule_miss",
+      "verdict": "PASS",
+      "events_count": 2,
+      "decoded_count": 2,
+      "alert_count": 0,
+      "alerts": [],
+      "details": "2 decoded, no rule matched (correct benign)"
+    },
+    {
+      "case_id": "P-DET-22",
+      "expected": "no_alert",
+      "category": "rule_miss",
+      "verdict": "PASS",
+      "events_count": 2,
+      "decoded_count": 2,
+      "alert_count": 0,
+      "alerts": [],
+      "details": "2 decoded, no rule matched (correct benign)"
+    },
+    {
+      "case_id": "P-DET-23",
+      "expected": "no_alert",
+      "category": "rule_miss",
+      "verdict": "PASS",
+      "events_count": 2,
+      "decoded_count": 2,
+      "alert_count": 0,
+      "alerts": [],
+      "details": "2 decoded, no rule matched (correct benign)"
+    },
+    {
+      "case_id": "P-DET-24",
+      "expected": "no_alert",
+      "category": "rule_miss",
+      "verdict": "PASS",
+      "events_count": 2,
+      "decoded_count": 2,
+      "alert_count": 0,
+      "alerts": [],
+      "details": "2 decoded, no rule matched (correct benign)"
+    },
+    {
+      "case_id": "P-DET-25",
+      "expected": "no_alert",
+      "category": "rule_miss",
+      "verdict": "PASS",
+      "events_count": 2,
+      "decoded_count": 2,
+      "alert_count": 0,
+      "alerts": [],
+      "details": "2 decoded, no rule matched (correct benign)"
+    },
+    {
+      "case_id": "P-DET-26",
+      "expected": "no_alert",
+      "category": "rule_miss",
+      "verdict": "PASS",
+      "events_count": 2,
+      "decoded_count": 2,
+      "alert_count": 0,
+      "alerts": [],
+      "details": "2 decoded, no rule matched (correct benign)"
+    },
+    {
+      "case_id": "P-DET-27",
+      "expected": "no_alert",
+      "category": "rule_miss",
+      "verdict": "PASS",
+      "events_count": 2,
+      "decoded_count": 2,
+      "alert_count": 0,
+      "alerts": [],
+      "details": "2 decoded, no rule matched (correct benign)"
+    },
+    {
+      "case_id": "P-DET-28",
+      "expected": "no_alert",
+      "category": "rule_miss",
+      "verdict": "PASS",
+      "events_count": 2,
+      "decoded_count": 2,
+      "alert_count": 0,
+      "alerts": [],
+      "details": "2 decoded, no rule matched (correct benign)"
+    },
+    {
+      "case_id": "P-DET-29",
+      "expected": "no_alert",
+      "category": "rule_miss",
+      "verdict": "PASS",
+      "events_count": 2,
+      "decoded_count": 2,
+      "alert_count": 0,
+      "alerts": [],
+      "details": "2 decoded, no rule matched (correct benign)"
+    },
+    {
+      "case_id": "P-DET-30",
+      "expected": "no_alert",
+      "category": "rule_miss",
+      "verdict": "PASS",
+      "events_count": 2,
+      "decoded_count": 2,
+      "alert_count": 0,
+      "alerts": [],
+      "details": "2 decoded, no rule matched (correct benign)"
+    },
+    {
+      "case_id": "P-DET-31",
+      "expected": "no_alert",
+      "category": "rule_miss",
+      "verdict": "PASS",
+      "events_count": 2,
+      "decoded_count": 2,
+      "alert_count": 0,
+      "alerts": [],
+      "details": "2 decoded, no rule matched (correct benign)"
+    },
+    {
+      "case_id": "P-DET-32",
+      "expected": "no_alert",
+      "category": "rule_miss",
+      "verdict": "PASS",
+      "events_count": 2,
+      "decoded_count": 2,
+      "alert_count": 0,
+      "alerts": [],
+      "details": "2 decoded, no rule matched (correct benign)"
+    },
+    {
+      "case_id": "P-DET-33",
+      "expected": "no_alert",
+      "category": "rule_miss",
+      "verdict": "PASS",
+      "events_count": 2,
+      "decoded_count": 2,
+      "alert_count": 0,
+      "alerts": [],
+      "details": "2 decoded, no rule matched (correct benign)"
+    },
+    {
+      "case_id": "P-DET-34",
+      "expected": "no_alert",
+      "category": "rule_miss",
+      "verdict": "PASS",
+      "events_count": 2,
+      "decoded_count": 2,
+      "alert_count": 0,
+      "alerts": [],
+      "details": "2 decoded, no rule matched (correct benign)"
+    },
+    {
+      "case_id": "P-DET-35",
+      "expected": "no_alert",
+      "category": "rule_miss",
+      "verdict": "PASS",
+      "events_count": 2,
+      "decoded_count": 2,
+      "alert_count": 0,
+      "alerts": [],
+      "details": "2 decoded, no rule matched (correct benign)"
+    },
+    {
+      "case_id": "P-DET-36",
+      "expected": "no_alert",
+      "category": "rule_miss",
+      "verdict": "PASS",
+      "events_count": 2,
+      "decoded_count": 2,
+      "alert_count": 0,
+      "alerts": [],
+      "details": "2 decoded, no rule matched (correct benign)"
+    }
+  ]
+}

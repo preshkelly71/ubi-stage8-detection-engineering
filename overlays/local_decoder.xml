@@ -1,0 +1,5 @@
+<decoder name="netforge_training_process">
+  <prematch>NETFORGE_TRAINING_PROCESS</prematch>
+  <regex>host=([^ ]+) user=(\S+) image=([^ ]+) parent=([^ ]+) family=([^ ]+)(?: technique_id=(\S+))?</regex>
+  <order>host,user,image,parent,command_family,technique_id</order>
+</decoder>
