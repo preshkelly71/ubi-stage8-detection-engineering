@@ -1,0 +1,9 @@
+158764  110100 (L3): NetForge controlled process telemetry
+     2  110200 (L10): T1059.001: PowerShell or shell execution from suspicious par
+     1  110202 (L10): T1547.001: Registry run key modification via shell
+     1  110203 (L10): T1003.001: Credential access via LOLBin
+     1  110206 (L10): T1105: Ingress tool transfer via LOLBin
+     1  110300 (L12): Office-to-shell-to-download chain on same host
+     1  110301 (L12): Shell-to-credential-access chain on same host
+     1  110302 (L12): CMD-to-registry-persistence chain on same host
+Total custom alerts: 158772
