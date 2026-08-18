@@ -6,3 +6,8 @@ replay-results.xml
 evidence/raw/windows-replay.jsonl
 .venv/
 *.egg-info/
+
+# Large evidence files
+evidence/live-lab-alerts.log.gz
+evidence/replay-wazuh.log
+evidence/wazuh-alerts.json
