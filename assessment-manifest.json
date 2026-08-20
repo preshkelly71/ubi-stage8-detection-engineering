@@ -9,7 +9,7 @@
     "manifest_signature": "UBI-A8-5387EC8C680E",
     "verified_before_use": true
   },
-  "commit": "2fc142de2413c063f2bfb46079ae4feb73de35ea",
+  "commit": "601f4f0ceda42361fdac95b07ffb375a8c294604",
   "supported_environment": {
     "os": "WSL2 Ubuntu (Windows 11)",
     "cpu": "i7-1165G7",
