@@ -9,6 +9,9 @@ Detection-as-code pipeline for 12 MITRE ATT&CK techniques, tested against 36 pub
 **Evidence Marker:** UBI-A8-5387EC8C680E
 **Track:** SOC Analysis
 
+**Repository:** https://github.com/preshkelly71/ubi-stage8-detection-engineering
+**Clone:** `git clone https://github.com/preshkelly71/ubi-stage8-detection-engineering.git`
+
 ## Architecture
 
 The pipeline has three layers:

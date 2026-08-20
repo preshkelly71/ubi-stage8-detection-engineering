@@ -9,7 +9,8 @@ artifacts or lab. I have declared material assistance below and can reproduce
 the work during recorded defense. I did not alter raw evidence, fabricate tool
 output, rewrite commit history, share restricted artifacts, or cross scope.
 
-Assistance and tools used: AI assistance for project architecture, rule design, and test harness implementation. Gemini/DeepSeek for code generation during builds. Official Wazuh 4.14.6 documentation and MITRE ATT&CK references.
+Assistance and tools used: AI assistance for project architecture, rule design, test harness implementation, and code generation. Official Wazuh 4.14.6 documentation and MITRE ATT&CK references.
 
 Signed name: PRECIOUS KELECHI OKAFOR
-UTC date/time: 2026-08-25T18:10:00Z
+Signature: PKO
+UTC date/time: 2026-08-20T18:10:00Z
