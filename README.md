@@ -98,7 +98,7 @@ Rules match on process behavioral classes, not literal names:
 Wazuh 4.14.6 Docker deployment:
 
 ```bash
-cd lab
+cd detection-lab
 bash prepare-wazuh.sh
 # Follow pinned repository instructions for certificate generation
 docker compose up -d
