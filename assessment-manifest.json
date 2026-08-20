@@ -28,12 +28,16 @@
     "clean": "make clean"
   },
   "results": {
-    "public_tests": { "passed": 69, "failed": 0, "report": "test-results.xml" },
+    "public_tests": {
+      "passed": 69,
+      "failed": 0,
+      "report": "test-results.xml"
+    },
     "runtime_seconds": 2.9,
     "peak_memory_mb": 0,
     "output_hashes": {
-      "test_results_xml": "COMPUTED_AT_BUILD",
-      "replay_results_xml": "COMPUTED_AT_BUILD"
+      "test_results_xml": "7035f4be1ccce8b4649d68a584dcb04ed59c664a6e510c17cac769bc594cac7f",
+      "replay_results_xml": "e06f9f8af89a26107ed178a5ef3c8c2d65662fa4a01a7257f1a65c301fd258c4"
     }
   },
   "inputs": [
@@ -53,8 +57,8 @@
     "Record 12-minute defense walkthrough video"
   ],
   "known_limitations": [
-    "5 of 12 techniques lack sealed replay evidence (T1053.005, T1087.001, T1057, T1136.001, T1555) — require live lab testing",
-    "Wazuh Docker deployment not included in ZIP — follow lab/README.md for setup",
+    "5 of 12 techniques lack sealed replay evidence (T1053.005, T1087.001, T1057, T1136.001, T1555) \u2014 require live lab testing",
+    "Wazuh Docker deployment not included in ZIP \u2014 follow lab/README.md for setup",
     "Windows 11 VM setup required for live Atomic Red Team tests"
   ]
 }
