@@ -1,6 +1,6 @@
 f4473812fcd02ef2f7cb6022f98fdf5d6441f1637ba52457694012804b9260f3  ./.gitignore
 43f44bd088b8c0d29e4c77b862227b5c0bd341048fcd90e54c8a2f5e8a661663  ./Makefile
-fb876b30620fc9b82a2c57796297ba7c316e499fe8092a4058bf953760411d61  ./README.md
+3c2fc42c62ef7b82042ec7bd272a31fedc35c627f66ddeff5d81f47381f8d973  ./README.md
 4e8ba2c864b02caccb5d977519651457d9ca2db486c7c563fefd105e9c8cb2fb  ./alerts/live-lab-detection-summary.txt
 e70c625d5ab47f1d17df7f4106b2994613ceb40b56786af611316efe5a325df9  ./alerts/live-lab-summary.md
 a6828d9ad96f8381f48bc4c2320e3ae1d922558920df0c7d407c0c6c23201a97  ./alerts/wazuh-alert-summary.txt
@@ -56,7 +56,7 @@ ca6bbb9a4c4712eba31ad68923c51b5604071c4b775396bd8d8855683ab73450  ./src/adapter.
 eba6b755c1ae16c6004c97aeeb8b2df17a3158e785d0fb1e45fa5e8a62500f42  ./src/rule_engine.py
 0333c6db276e2288f825de76dba727f4a0e2c4180b5042bacb7612563ee226dd  ./src/rules_config.py
 be8cd55ab9a112d5ba408e3a2d3b8d65051d4fd5314308f46a32a632358cd68e  ./test-results.json
-960f334e2fc6e45cea259448b041a5aa2d1ba7f4122536f68fdd4f9adc0595f8  ./test-results.xml
+7035f4be1ccce8b4649d68a584dcb04ed59c664a6e510c17cac769bc594cac7f  ./test-results.xml
 109781046b00ed2e85722998da2a1df25b4f3030aab6bdb8e49be0aefa590c9a  ./tests/__init__.py
 e4d0ddd55c7de19f7a25152657a3f0f26acf31b9bec1ac0fc78ce7c385b58da8  ./tests/__pycache__/__init__.cpython-314.pyc
 6452059cc2fbfc7e4dc0f665e882d481b2d46a03508e4dc7ca6b2ca9db6029f2  ./tests/__pycache__/conftest.cpython-314-pytest-9.1.1.pyc
