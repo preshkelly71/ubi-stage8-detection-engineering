@@ -1,10 +1,10 @@
-b8d48ea713d0a57baff71be507624f1cc9026b86a05713fd96d9d5e55c500f27  ./.gitignore
+f4473812fcd02ef2f7cb6022f98fdf5d6441f1637ba52457694012804b9260f3  ./.gitignore
 43f44bd088b8c0d29e4c77b862227b5c0bd341048fcd90e54c8a2f5e8a661663  ./Makefile
 82f883d2f659c7a101aafc899d7a8692bd1d44e5adb67707e179a9bc0cf8d6e8  ./README.md
 4e8ba2c864b02caccb5d977519651457d9ca2db486c7c563fefd105e9c8cb2fb  ./alerts/live-lab-detection-summary.txt
 e70c625d5ab47f1d17df7f4106b2994613ceb40b56786af611316efe5a325df9  ./alerts/live-lab-summary.md
 a6828d9ad96f8381f48bc4c2320e3ae1d922558920df0c7d407c0c6c23201a97  ./alerts/wazuh-alert-summary.txt
-b52918751ced966066857c9ee3d62cc6c684ab5bcfb4af6c305dc0f77e7c58ce  ./assessment-manifest.json
+1c56d4ceb36b59df4368154e6e9a5d7210918cd68dc25c9c2a2c285fde0950a1  ./assessment-manifest.json
 b45135fd1a61d7c60cc5a6c0d2a738f9b587dfd08177ca439e78ec2365d620c4  ./continuity-record.md
 f6f91d0f8b0a5d40a092cfa00b6e47f5e5062acb77b217ea9e3cd7cd86f3f5e0  ./coverage-matrix.csv
 a8c636a9ad7112a2abf4a0ff5e4c9b153730073bed6c8df8ea98f69c9b1a88d6  ./decision-log.md
@@ -15,7 +15,6 @@ cefe0a72d232fb6ffabd9321b323e123e1b0ee29146e337bc576532251088b54  ./detection-la
 766db643c10564a0301e5282793c12e1844cbf3c6046511eb817ddbe702cf764  ./detection-lab/prepare-wazuh.sh
 b8567a53fc6b122e85ea02e16c8ffb32d5f38ad2f3bca0d12349c5d9701b352f  ./evidence-index.csv
 e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  ./evidence/derived/.gitkeep
-ea7f96497f9275ccdc47fdb026480558547db5bfaa7aa8bf3a806a2bc9272838  ./evidence/raw/windows-replay.jsonl
 f9c6df0810ec03fff387ecce023b8b7d31f5b79edb1379e676e063031845f02e  ./fixtures/public-fixtures.json
 6a47c82f1ccdd1c96c6d245c8079e3b96211c1ce390de7aee527cddbc705aa9c  ./inject_replay.py
 fde454b2c98ae133b3a11feae59877655ecc526fd2e7a626ef75ebba8c3a8de6  ./integrity-attestation.md
