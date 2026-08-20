@@ -4,7 +4,7 @@ fb876b30620fc9b82a2c57796297ba7c316e499fe8092a4058bf953760411d61  ./README.md
 4e8ba2c864b02caccb5d977519651457d9ca2db486c7c563fefd105e9c8cb2fb  ./alerts/live-lab-detection-summary.txt
 e70c625d5ab47f1d17df7f4106b2994613ceb40b56786af611316efe5a325df9  ./alerts/live-lab-summary.md
 a6828d9ad96f8381f48bc4c2320e3ae1d922558920df0c7d407c0c6c23201a97  ./alerts/wazuh-alert-summary.txt
-64bd1fb2f0ec626a04a9d6cd35f38e5748674b63107dc25949120151a4534daf  ./assessment-manifest.json
+963bd397d208ebc972e53eb7badeea135f250ce84ce19ea309125e53684ff705  ./assessment-manifest.json
 b45135fd1a61d7c60cc5a6c0d2a738f9b587dfd08177ca439e78ec2365d620c4  ./continuity-record.md
 f6f91d0f8b0a5d40a092cfa00b6e47f5e5062acb77b217ea9e3cd7cd86f3f5e0  ./coverage-matrix.csv
 a8c636a9ad7112a2abf4a0ff5e4c9b153730073bed6c8df8ea98f69c9b1a88d6  ./decision-log.md
@@ -75,4 +75,4 @@ a48658a28e0e30eaa7d6fd55d58100538b21ec2be0b8afaab337b0ee0326883f  ./tests/test_c
 68922cbc0cab264ac6cc7c4af2fb416d7a40b37f4bd4229fdbe0ed5894863141  ./tests/test_harness.py
 4750e724125423e6066fc0001759f6e252b181caa271fa49b67b83c39d067e48  ./tests/test_malformed.py
 9f5eb42f1a17941b81957c2f8b97b2a64c70815faadfb677cd738d0e7ef96f0f  ./tests/test_rule_engine.py
-9de213b0df6330100f15420c396b4c473e9178bf91ef593a4529735e6f86b853  ./video-url.txt
+dfc3370a734eab42ebe99eff37cffdd9d64bce904b3e438bc1ac5b66d6ece7f7  ./video-url.txt
