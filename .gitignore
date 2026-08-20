@@ -3,7 +3,7 @@ __pycache__/
 .pytest_cache/
 test-results.xml
 replay-results.xml
-evidence/raw/windows-replay.jsonl
+raw-events/windows-replay.jsonlwindows-replay.jsonl
 .venv/
 *.egg-info/
 

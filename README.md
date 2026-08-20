@@ -36,7 +36,7 @@ make test
 # Run test harness against public fixtures (36 fixtures, instant)
 make harness
 
-# Run against sealed replay (requires evidence/raw/windows-replay.jsonl)
+# Run against sealed replay (requires raw-events/windows-replay.jsonl)
 make replay
 ```
 
@@ -104,7 +104,7 @@ bash prepare-wazuh.sh
 docker compose up -d
 ```
 
-Windows 11 VM setup: see `lab/README.md` and `lab/Install-Endpoint.ps1`.
+Windows 11 VM setup: see `detection-lab/README.md` and `detection-lab/Install-Endpoint.ps1`.
 
 ## Key Design Decisions
 
@@ -132,11 +132,11 @@ Windows 11 VM setup: see `lab/README.md` and `lab/Install-Endpoint.ps1`.
 ├── continuity-record.md   # Stage 7 → 8 continuity
 ├── decision-log.md        # Consequential design decisions
 ├── evidence-index.csv     # Evidence artifact index
-├── technique-matrix.csv   # 12 ATT&CK techniques mapping
-├── overlays/              # Wazuh XML rules and decoders
+├── coverage-matrix.csv   # 12 ATT&CK techniques mapping
+├── rules/ and decoders/              # Wazuh XML rules and decoders
 ├── src/                   # Python detection engine
 ├── tests/                 # Unit test suite
-├── lab/                   # Wazuh/Windows deployment scripts
+├── detection-lab/                   # Wazuh/Windows deployment scripts
 ├── fixtures/              # Public test fixtures
 └── evidence/              # Sealed replay (gitignored) and derived outputs
 ```
@@ -155,5 +155,5 @@ Windows 11 VM setup: see `lab/README.md` and `lab/Install-Endpoint.ps1`.
 2. `python3 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt`
 3. `make test` — verify 69/69 tests pass
 4. `make harness` — verify 36/36 fixtures pass
-5. Place `windows-replay.jsonl` in `evidence/raw/`
+5. Place `windows-replay.jsonl` in `raw-events/`
 6. `make replay` — verify 8 attack events detected, 0 false positives

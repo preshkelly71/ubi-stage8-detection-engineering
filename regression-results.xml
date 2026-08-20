@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<testsuite name="ubi-stage8-detection-engineering" tests="0" failures="0" errors="0" time="0">
+  <testcase name="sealed-replay" classname="replay" time="0">
+    <system-out>Events: 250000, Alerted: 8, Correlation alerts: 25</system-out>
+  </testcase>
+</testsuite>

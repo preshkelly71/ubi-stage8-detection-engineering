@@ -9,7 +9,7 @@
     "manifest_signature": "UBI-A8-5387EC8C680E",
     "verified_before_use": true
   },
-  "commit": "85ca4c8",
+  "commit": "90d4b72",
   "supported_environment": {
     "os": "WSL2 Ubuntu (Windows 11)",
     "cpu": "i7-1165G7",
@@ -37,28 +37,28 @@
     "peak_memory_mb": 0,
     "output_hashes": {
       "test_results_xml": "7035f4be1ccce8b4649d68a584dcb04ed59c664a6e510c17cac769bc594cac7f",
-      "replay_results_xml": "e06f9f8af89a26107ed178a5ef3c8c2d65662fa4a01a7257f1a65c301fd258c4"
+      "regression_results_xml": "e06f9f8af89a26107ed178a5ef3c8c2d65662fa4a01a7257f1a65c301fd258c4"
     }
   },
   "inputs": [
     "fixtures/public-fixtures.json",
-    "evidence/raw/windows-replay.jsonl"
+    "raw-events/windows-replay.jsonl"
   ],
   "outputs": [
     "test-results.xml",
     "test-results.json",
-    "replay-results.xml",
-    "replay-results.json"
+    "regression-results.xml",
+    "regression-results.json"
   ],
   "manual_preconditions": [
-    "Copy windows-replay.jsonl to evidence/raw/ before running replay",
+    "Copy windows-replay.jsonl to raw-events/ before running replay",
     "Fill git commit hash after pushing to GitHub",
     "Run live Atomic Red Team tests on Windows VM for 5 techniques without sealed replay evidence",
     "Record 12-minute defense walkthrough video"
   ],
   "known_limitations": [
     "5 of 12 techniques lack sealed replay evidence (T1053.005, T1087.001, T1057, T1136.001, T1555) \u2014 require live lab testing",
-    "Wazuh Docker deployment not included in ZIP \u2014 follow lab/README.md for setup",
+    "Wazuh Docker deployment not included in ZIP \u2014 follow detection-lab/README.md for setup",
     "Windows 11 VM setup required for live Atomic Red Team tests"
   ]
 }

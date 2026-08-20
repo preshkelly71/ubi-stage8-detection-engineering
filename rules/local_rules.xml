@@ -1,0 +1,199 @@
+<!--
+  UBI Stage 8 — Detection Rules Overlay for Wazuh 4.14.6
+
+  12 base detection rules + 6 correlation rules.
+  Rules detect semantic behavioral patterns, not command literals.
+
+  Rule numbering: 110100-110101 (starter), 110200-110211 (base), 110300-110305 (correlation)
+-->
+<group name="netforge_training,detection,">
+
+  <!-- ─── Base catch-all rule (level 3) ─────────────────────────────────── -->
+  <rule id="110100" level="3">
+    <decoded_as>netforge_training_process</decoded_as>
+    <description>NetForge controlled process telemetry</description>
+    <options>no_full_log</options>
+  </rule>
+
+  <!-- ─── 12 Base Detection Rules ────────────────────────────────────────── -->
+
+  <!-- T1059.001: PowerShell Execution from Suspicious Parent -->
+  <rule id="110200" level="10">
+    <if_sid>110100</if_sid>
+    <field name="command_family" type="pcre2">^(encoded_or_obfuscated|download|registry_run_key|credential_access)$</field>
+    <field name="image" type="pcre2">(?i)^(powershell|pwsh|cmd|rundll32|regsvr32|wscript|cscript)\.exe$</field>
+    <field name="parent" type="pcre2">(?i)^(winword|excel|outlook|powerpoint|wmiprvse|services|config-agent|sccm-client|enterprise-updater|explorer|mshta)\.exe$</field>
+    <description>T1059.001: PowerShell or shell execution from suspicious parent</description>
+    <mitre><id>T1059.001</id></mitre>
+  </rule>
+
+  <!-- T1053.005: Scheduled Task Creation -->
+  <rule id="110201" level="10">
+    <if_sid>110100</if_sid>
+    <field name="command_family" type="pcre2">^(encoded_or_obfuscated|download|registry_run_key|credential_access)$</field>
+    <field name="image" type="pcre2">(?i)^(schtasks|at)\.exe$</field>
+    <field name="parent" type="pcre2">(?i)^(powershell|cmd|wscript|cscript|services|wmiprvse)\.exe$</field>
+    <description>T1053.005: Scheduled task creation from suspicious context</description>
+    <mitre><id>T1053.005</id></mitre>
+  </rule>
+
+  <!-- T1547.001: Registry Run Key Modification -->
+  <rule id="110202" level="10">
+    <if_sid>110100</if_sid>
+    <field name="command_family" type="pcre2">^(registry_run_key|encoded_or_obfuscated)$</field>
+    <field name="image" type="pcre2">(?i)^(reg|regedit)\.exe$</field>
+    <field name="parent" type="pcre2">(?i)^(cmd|powershell|wscript|cscript)\.exe$</field>
+    <description>T1547.001: Registry run key modification via shell</description>
+    <mitre><id>T1547.001</id></mitre>
+  </rule>
+
+  <!-- T1003.001: Credential Access via LOLBin -->
+  <rule id="110203" level="10">
+    <if_sid>110100</if_sid>
+    <field name="command_family" type="pcre2">^(credential_access|encoded_or_obfuscated)$</field>
+    <field name="image" type="pcre2">(?i)^(rundll32|regsvr32|cmd|certutil|vaultcmd|cmdkey|procdump)\.exe$</field>
+    <field name="parent" type="pcre2">(?i)^(services|winword|explorer|powershell|wmiprvse|config-agent|cmd)\.exe$</field>
+    <description>T1003.001: Credential access via LOLBin</description>
+    <mitre><id>T1003.001</id></mitre>
+  </rule>
+
+  <!-- T1087.001: Local Account Discovery -->
+  <rule id="110204" level="10">
+    <if_sid>110100</if_sid>
+    <field name="command_family" type="pcre2">^(encoded_or_obfuscated|download|registry_run_key|credential_access)$</field>
+    <field name="image" type="pcre2">(?i)^(net|whoami|dsquery|nltest)\.exe$</field>
+    <field name="parent" type="pcre2">(?i)^(powershell|cmd|services|wmiprvse|config-agent|sccm-client)\.exe$</field>
+    <description>T1087.001: Local account discovery from suspicious context</description>
+    <mitre><id>T1087.001</id></mitre>
+  </rule>
+
+  <!-- T1057: Process Discovery -->
+  <rule id="110205" level="10">
+    <if_sid>110100</if_sid>
+    <field name="command_family" type="pcre2">^(encoded_or_obfuscated|download|registry_run_key|credential_access)$</field>
+    <field name="image" type="pcre2">(?i)^(tasklist|wmic|quser|query|netstat)\.exe$</field>
+    <field name="parent" type="pcre2">(?i)^(powershell|cmd|services|wmiprvse|winword|config-agent|sccm-client)\.exe$</field>
+    <description>T1057: Process discovery from suspicious context</description>
+    <mitre><id>T1057</id></mitre>
+  </rule>
+
+  <!-- T1105: Ingress Tool Transfer -->
+  <rule id="110206" level="10">
+    <if_sid>110100</if_sid>
+    <field name="command_family" type="pcre2">^(download|encoded_or_obfuscated)$</field>
+    <field name="image" type="pcre2">(?i)^(certutil|bitsadmin|regsvr32|powershell|curl|wget)\.exe$</field>
+    <field name="parent" type="pcre2">(?i)^(powershell|cmd|explorer|services|wmiprvse)\.exe$</field>
+    <description>T1105: Ingress tool transfer via LOLBin</description>
+    <mitre><id>T1105</id></mitre>
+  </rule>
+
+  <!-- T1218.011: Rundll32 Execution from Suspicious Parent -->
+  <rule id="110207" level="10">
+    <if_sid>110100</if_sid>
+    <field name="command_family" type="pcre2">^(encoded_or_obfuscated|credential_access|download|registry_run_key)$</field>
+    <field name="image" type="pcre2">(?i)^(rundll32|cmd|powershell|regsvr32)\.exe$</field>
+    <field name="parent" type="pcre2">(?i)^(services|config-agent|sccm-client|explorer|powershell|wmiprvse|cmd)\.exe$</field>
+    <description>T1218.011: Rundll32 or LOLBin execution from suspicious parent</description>
+    <mitre><id>T1218.011</id></mitre>
+  </rule>
+
+  <!-- T1059.003: Command Shell Execution from Suspicious Parent -->
+  <rule id="110208" level="10">
+    <if_sid>110100</if_sid>
+    <field name="command_family" type="pcre2">^(encoded_or_obfuscated|download|registry_run_key|credential_access)$</field>
+    <field name="image" type="pcre2">(?i)^(cmd|regsvr32|powershell)\.exe$</field>
+    <field name="parent" type="pcre2">(?i)^(config-agent|sccm-client|enterprise-updater|services|wmiprvse|explorer)\.exe$</field>
+    <description>T1059.003: Command shell execution from suspicious parent</description>
+    <mitre><id>T1059.003</id></mitre>
+  </rule>
+
+  <!-- T1136.001: Local Account Creation -->
+  <rule id="110209" level="10">
+    <if_sid>110100</if_sid>
+    <field name="command_family" type="pcre2">^(encoded_or_obfuscated|download|registry_run_key|credential_access)$</field>
+    <field name="image" type="pcre2">(?i)^(net|dsadd|powershell)\.exe$</field>
+    <field name="parent" type="pcre2">(?i)^(powershell|cmd|services|wmiprvse)\.exe$</field>
+    <description>T1136.001: Local account creation from suspicious context</description>
+    <mitre><id>T1136.001</id></mitre>
+  </rule>
+
+  <!-- T1555: Credential Store Access -->
+  <rule id="110210" level="10">
+    <if_sid>110100</if_sid>
+    <field name="command_family" type="pcre2">^(credential_access|encoded_or_obfuscated)$</field>
+    <field name="image" type="pcre2">(?i)^(vaultcmd|cmdkey|rundll32|certutil)\.exe$</field>
+    <field name="parent" type="pcre2">(?i)^(powershell|cmd|services|wmiprvse)\.exe$</field>
+    <description>T1555: Credential store access from suspicious context</description>
+    <mitre><id>T1555</id></mitre>
+  </rule>
+
+  <!-- T1027: Obfuscated File or Command Execution -->
+  <rule id="110211" level="10">
+    <if_sid>110100</if_sid>
+    <field name="command_family" type="pcre2">^encoded_or_obfuscated$</field>
+    <field name="image" type="pcre2">(?i)^(powershell|cmd|certutil|rundll32|regsvr32)\.exe$</field>
+    <field name="parent" type="pcre2">(?i)^(winword|excel|outlook|powerpoint|services|wmiprvse|config-agent|sccm-client|enterprise-updater|explorer|powershell|cmd)\.exe$</field>
+    <description>T1027: Obfuscated file or command execution</description>
+    <mitre><id>T1027</id></mitre>
+  </rule>
+
+  <!-- ─── 6 Correlation Rules (sequence/time-window) ─────────────────────── -->
+
+  <!-- CORR-1: Office→Shell→Download chain (24h window) -->
+  <rule id="110300" level="12" frequency="2" timeframe="86400">
+    <if_matched_sid>110200</if_matched_sid>
+    <if_matched_sid>110206</if_matched_sid>
+    <description>Office-to-shell-to-download chain on same host</description>
+    <mitre><id>T1059.001</id><id>T1105</id></mitre>
+  </rule>
+
+  <!-- CORR-2: Shell→Credential Access chain (24h window) -->
+  <rule id="110301" level="12" frequency="2" timeframe="86400">
+    <if_matched_sid>110200</if_matched_sid>
+    <if_matched_sid>110203</if_matched_sid>
+    <description>Shell-to-credential-access chain on same host</description>
+    <mitre><id>T1003.001</id></mitre>
+  </rule>
+
+  <!-- CORR-3: CMD→Registry Persistence chain (24h window) -->
+  <rule id="110302" level="12" frequency="2" timeframe="86400">
+    <if_matched_sid>110208</if_matched_sid>
+    <if_matched_sid>110202</if_matched_sid>
+    <description>CMD-to-registry-persistence chain on same host</description>
+    <mitre><id>T1547.001</id></mitre>
+  </rule>
+
+  <!-- CORR-4: Multiple suspicious events same host (3+ in 24h) -->
+  <rule id="110303" level="12" frequency="3" timeframe="86400">
+    <if_matched_sid>110200</if_matched_sid>
+    <if_matched_sid>110201</if_matched_sid>
+    <if_matched_sid>110202</if_matched_sid>
+    <if_matched_sid>110203</if_matched_sid>
+    <if_matched_sid>110204</if_matched_sid>
+    <if_matched_sid>110205</if_matched_sid>
+    <if_matched_sid>110206</if_matched_sid>
+    <if_matched_sid>110207</if_matched_sid>
+    <if_matched_sid>110208</if_matched_sid>
+    <if_matched_sid>110209</if_matched_sid>
+    <if_matched_sid>110210</if_matched_sid>
+    <if_matched_sid>110211</if_matched_sid>
+    <description>Multiple suspicious process events from same host within 24h</description>
+  </rule>
+
+  <!-- CORR-5: Encoded→Download chain (24h window) -->
+  <rule id="110304" level="12" frequency="2" timeframe="86400">
+    <if_matched_sid>110211</if_matched_sid>
+    <if_matched_sid>110206</if_matched_sid>
+    <description>Encoded command followed by ingress tool transfer on same host</description>
+    <mitre><id>T1027</id><id>T1105</id></mitre>
+  </rule>
+
+  <!-- CORR-6: Shell→Discovery chain (24h window) -->
+  <rule id="110305" level="12" frequency="2" timeframe="86400">
+    <if_matched_sid>110200</if_matched_sid>
+    <if_matched_sid>110205</if_matched_sid>
+    <description>Shell execution followed by discovery tool on same host</description>
+    <mitre><id>T1057</id></mitre>
+  </rule>
+
+</group>

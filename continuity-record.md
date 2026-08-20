@@ -16,7 +16,7 @@
 
 - Stage 7's `test-results.xml` (JUnit format) is preserved as the test output format
 - Stage 7's Makefile pattern (`make test`, `make harness`) is extended with `make replay`
-- Stage 7's `.gitignore` pattern for excluding raw evidence is preserved (`evidence/raw/` is gitignored)
+- Stage 7's `.gitignore` pattern for excluding raw evidence is preserved (`raw-events/` is gitignored)
 
 ## Evidence that prior raw-to-result provenance remains intact
 
@@ -31,9 +31,9 @@ No incompatible changes. The Stage 7 test framework was general (pytest + JUnit 
 ## Next-stage handoff
 
 The following components are handed to Stage 9:
-- 12 Wazuh-compatible detection rules (overlays/local_rules.xml)
-- 1 Wazuh decoder (overlays/local_decoder.xml)
+- 12 Wazuh-compatible detection rules (rules/ and decoders/local_rules.xml)
+- 1 Wazuh decoder (rules/ and decoders/local_decoder.xml)
 - Python test harness with 5-way classification (src/harness.py)
 - 6 correlation rules with time-window sequences (src/correlator.py)
 - Behavioral process classification system (src/rules_config.py)
-- Coverage gaps documented in technique-matrix.csv (5 techniques have no sealed replay or public fixture evidence — require live lab testing)
+- Coverage gaps documented in coverage-matrix.csv (5 techniques have no sealed replay or public fixture evidence — require live lab testing)

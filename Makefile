@@ -16,13 +16,13 @@ test:
 harness:
 	$(PYTHON) -m src.harness --fixtures fixtures/public-fixtures.json --report test-results.xml --json-report test-results.json
 
-# Run the harness against sealed replay (requires evidence/raw/windows-replay.jsonl)
+# Run the harness against sealed replay (requires raw-events/windows-replay.jsonl)
 replay:
-	$(PYTHON) -m src.harness --replay evidence/raw/windows-replay.jsonl --report replay-results.xml --json-report replay-results.json
+	$(PYTHON) -m src.harness --replay raw-events/windows-replay.jsonl --report regression-results.xml --json-report regression-results.json
 
 # Run both fixtures and replay
 all:
-	$(PYTHON) -m src.harness --fixtures fixtures/public-fixtures.json --replay evidence/raw/windows-replay.jsonl --report test-results.xml --json-report test-results.json
+	$(PYTHON) -m src.harness --fixtures fixtures/public-fixtures.json --replay raw-events/windows-replay.jsonl --report test-results.xml --json-report test-results.json
 
 # Deploy Wazuh Docker (requires Docker)
 deploy:
@@ -30,7 +30,7 @@ deploy:
 	@echo "Generate certificates with the pinned repository instructions before docker compose up."
 
 clean:
-	rm -rf test-results.xml test-results.json replay-results.xml replay-results.json
+	rm -rf test-results.xml test-results.json regression-results.xml regression-results.json
 	find . -name "__pycache__" -type d -exec rm -rf {} + 2>/dev/null || true
 	find . -name ".pytest_cache" -type d -exec rm -rf {} + 2>/dev/null || true
 
