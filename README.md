@@ -143,7 +143,7 @@ Windows 11 VM setup: see `detection-lab/README.md` and `detection-lab/Install-En
 
 ## Tool Versions
 
-- Python 3.10+
+- Python 3.11+
 - Wazuh 4.14.6 (Docker)
 - pytest 7.0+
 - Windows 11 Evaluation (Sysmon + Wazuh agent)
